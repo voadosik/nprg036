@@ -86,3 +86,19 @@ ex:hasAward a rdf:Property ;
   rdfs:comment "Connects a Movie to an Award it has received."@en ;
   rdfs:isDefinedBy ex: ;
   owl:inverseOf ex:awardedTo .
+
+# Actor -> Film relationship
+ex:actsIn a rdf:Property ;
+  rdfs:label "acts in"@en ;
+  rdfs:domain ex:Actor ;
+  rdfs:range schema:Movie ;
+  rdfs:comment "Links an actor to a film they perform in."@en ;
+  rdfs:isDefinedBy ex: .
+
+# Director -> Film relationship  
+ex:directs a rdf:Property ;
+  rdfs:label "directs"@en ;
+  rdfs:domain ex:Director ;
+  rdfs:range schema:Movie ;
+  rdfs:comment "Links a director to a film they direct."@en ;
+  rdfs:isDefinedBy ex: .

@@ -7,14 +7,14 @@ MERGE (lalaland:Movie {title: 'La La Land'}) ON CREATE SET lalaland.durationMinu
 
 // Create Person nodes
 // Actor subclass of Person
-MERGE (gosling:Person:Actor {name:'Ryan Gosling'}) ON CREATE SET gosling.birthYear = 1980, gosling.phone = "+1-608-266-732"
-MERGE (ford:Person:Actor {name:'Harrison Ford'}) ON CREATE SET ford.birthYear = 1942, ford.phone = '+1-608-111-808'
-MERGE (stone:Person:Actor {name:'Emma Stone'}) ON CREATE SET stone.birthYear = 1988, stone.phone = '+1-793-264-092'
+MERGE (gosling:Person:Actor {name:'Ryan Gosling'}) ON CREATE SET gosling.birthYear = 1980, gosling.phone = "tel:+1-608-266-732"
+MERGE (ford:Person:Actor {name:'Harrison Ford'}) ON CREATE SET ford.birthYear = 1942, ford.phone = 'tel:+1-608-111-808'
+MERGE (stone:Person:Actor {name:'Emma Stone'}) ON CREATE SET stone.birthYear = 1988, stone.phone = 'tel:+1-793-264-092'
 
 // Director subclass of Person
-MERGE (refn:Person:Director {name:'Nicolas Winding Refn'}) ON CREATE SET refn.birthYear = 1970, refn.phone = "+1-324-266-793"
-MERGE (villeneuve:Person:Director {name:'Denis Villeneuve'}) ON CREATE SET villeneuve.birthYear = 1967, villeneuve.phone = '+1-853-945-839'
-MERGE (chazelle:Person:Director {name:'Damien Chazelle'}) ON CREATE SET chazelle.birthYear = 1985, chazelle.phone = '+1-063-853-354'
+MERGE (refn:Person:Director {name:'Nicolas Winding Refn'}) ON CREATE SET refn.birthYear = 1970, refn.phone = "tel:+1-324-266-793"
+MERGE (villeneuve:Person:Director {name:'Denis Villeneuve'}) ON CREATE SET villeneuve.birthYear = 1967, villeneuve.phone = 'tel:+1-853-945-839'
+MERGE (chazelle:Person:Director {name:'Damien Chazelle'}) ON CREATE SET chazelle.birthYear = 1985, chazelle.phone = 'tel:+1-063-853-354'
 
 //Create Award nodes
 MERGE (cannes:Award {name: 'Best Director Award'}) ON CREATE SET cannes.prizeMoney = 10000
@@ -48,5 +48,6 @@ MERGE (lalaland)-[:HAS_AWARD {year: 2017}]->(oscarActr)
 MERGE (hydro)-[:SHOWS_FILM]->(drive)
 MERGE (slovDum)-[:SHOWS_FILM]->(br2049)
 MERGE (guliver)-[:SHOWS_FILM]->(lalaland);
+
 
 

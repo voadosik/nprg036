@@ -75,7 +75,7 @@
   </defs>
 
   <!-- Title -->
-  <text x="600" y="30" class="title" text-anchor="middle">Film Festival Domain - Conceptual Model Covered by RDF Vocabularies</text>
+  <text x="600" y="30" class="title" text-anchor="middle">Film Festival Domain</text>
 
   <!-- schema:Person (base class) -->
   <rect x="100" y="80" width="280" height="120" class="existing-class-box"/>
@@ -161,24 +161,5 @@
   <text x="650" y="265" class="association-label">(showed)</text>
   <text x="615" y="290" class="multiplicity">1..*</text>
   <text x="615" y="215" class="multiplicity">1</text>
-
-  <!-- Legend -->
-  <rect x="50" y="450" width="400" height="120" fill="none" stroke="black" stroke-width="1"/>
-  <text x="60" y="475" class="class-title">Legend:</text>
-  
-  <rect x="60" y="490" width="120" height="30" class="existing-class-box"/>
-  <text x="70" y="510" class="attribute existing-vocab">Existing Vocabulary</text>
-  <text x="190" y="510" class="attribute">(schema.org, rdfs)</text>
-  
-  <rect x="60" y="530" width="120" height="30" class="custom-class-box"/>
-  <text x="70" y="550" class="attribute custom-vocab">Custom Vocabulary</text>
-  <text x="190" y="550" class="attribute">(ex: namespace)</text>
-
-  <!-- Vocabulary prefixes -->
-  <text x="600" y="470" class="class-title">Vocabulary Prefixes:</text>
-  <text x="600" y="495" class="attribute existing-vocab">schema: &lt;http://schema.org/&gt;</text>
-  <text x="600" y="515" class="attribute existing-vocab">rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</text>
-  <text x="600" y="535" class="attribute existing-vocab">xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</text>
-  <text x="600" y="555" class="attribute custom-vocab">ex: &lt;http://example.org/vocabulary/&gt;</text>
 
 </svg>

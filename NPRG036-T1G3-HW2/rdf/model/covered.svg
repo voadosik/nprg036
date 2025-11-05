@@ -44,9 +44,9 @@
   <!-- schema:Person -->
   <rect x="50" y="50" width="250" height="100" class="class-box"/>
   <text x="60" y="70" class="class-title">schema:Person</text>
-  <text x="60" y="95" class="attribute">foaf:name : rdf:langString</text>
+  <text x="60" y="95" class="attribute">schema:name : rdf:langString</text>
   <text x="60" y="115" class="attribute">ex:birthYear : xsd:gYear</text>
-  <text x="60" y="135" class="attribute">ex:phone : xsd:anyURI</text>
+  <text x="60" y="135" class="attribute">ex:phone : rdfs:Resource</text>
 
   <!-- ex:Actor -->
   <rect x="50" y="180" width="150" height="30" class="class-box"/>
@@ -61,7 +61,7 @@
   <!-- schema:Movie -->
   <rect x="400" y="50" width="250" height="100" class="class-box"/>
   <text x="410" y="70" class="class-title">schema:Movie</text>
-  <text x="410" y="95" class="attribute">dcterms:title : rdf:langString</text>
+  <text x="410" y="95" class="attribute">schema:name : rdf:langString</text>
   <text x="410" y="115" class="attribute">ex:durationMinutes : xsd:integer</text>
   <text x="410" y="135" class="attribute">schema:datePublished : xsd:gYear</text>
 
@@ -73,17 +73,17 @@
   <!-- ex:Award -->
   <rect x="700" y="50" width="200" height="80" class="class-box"/>
   <text x="710" y="70" class="class-title">ex:Award</text>
-  <text x="710" y="95" class="attribute">dcterms:title : rdf:langString</text>
+  <text x="710" y="95" class="attribute">schema:name : rdf:langString</text>
   <text x="710" y="115" class="attribute">ex:prizeMoney : xsd:decimal</text>
 
   <!-- Relationships -->
-  <!-- Movie → Person (actor) -->
-  <line x1="400" y1="80" x2="300" y2="80" class="arrow"/>
-  <text x="310" y="75" font-size="12" font-family="sans-serif">schema:actor</text>
+  <!-- Actor → Movie -->
+  <line x1="200" y1="195" x2="400" y2="80" class="arrow"/>
+  <text x="250" y="130" font-size="12" font-family="sans-serif">ex:actsIn</text>
 
-  <!-- Movie → Person (director) -->
-  <line x1="400" y1="100" x2="300" y2="100" class="arrow"/>
-  <text x="310" y="95" font-size="12" font-family="sans-serif">schema:director</text>
+  <!-- Director → Movie -->
+  <line x1="350" y1="195" x2="450" y2="150" class="arrow"/>
+  <text x="380" y="170" font-size="12" font-family="sans-serif">ex:directs</text>
 
   <!-- ScreeningEvent → Movie -->
   <line x1="525" y1="200" x2="525" y2="150" class="arrow"/>

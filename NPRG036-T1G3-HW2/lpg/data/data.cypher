@@ -22,9 +22,9 @@ MERGE (oscarCinem:Award {name: 'Oscar Best Cinematography'}) ON CREATE SET oscar
 MERGE (oscarActr:Award {name: 'Oscar Best Actress'}) ON CREATE SET oscarActr.prizeMoney = 20000
 
 //Create ScreeningEvent nodes
-MERGE (hydro:ScreeningEvent {locationName: 'Hydropark'}) ON CREATE SET hydro.startTime = datetime('2011-11-11T16:30:00')
-MERGE (slovDum:ScreeningEvent {locationName: 'Slovansky dum'}) ON CREATE SET slovDum.startTime = datetime('2017-07-16T21:00:00')
-MERGE (guliver:ScreeningEvent {locationName: 'Guliver'}) ON CREATE SET guliver.startTime = datetime('2016-05-27T12:15:00')
+MERGE (hydro:ScreeningEvent {locationName: 'Hydropark'}) ON CREATE SET hydro.startTime = datetime('2011-11-11T16:30:00'), hydro.label = 'Drive screening at Hydropark'
+MERGE (slovDum:ScreeningEvent {locationName: 'Slovansky dum'}) ON CREATE SET slovDum.startTime = datetime('2017-07-16T21:00:00'), slovDum.label = 'Blade Runner 2049 screening at Slovansky dum'
+MERGE (guliver:ScreeningEvent {locationName: 'Guliver'}) ON CREATE SET guliver.startTime = datetime('2016-05-27T12:15:00'), guliver.label = 'La La Land screening at Guliver'
 
 
 // Edges
